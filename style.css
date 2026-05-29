@@ -1,0 +1,132 @@
+#wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+body{
+    background: #F8F1E7;
+    font-family: Arial, sans-serif;
+    color: #2B2B2B;
+}
+#logo-title{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+#logo-title img{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+#header{
+    background : #5C3A21;
+    color: white;
+    padding: 20px;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+#hader h3{
+    margin-bottom: 20px;
+}
+#main-content{
+    display: flex;
+    min-height: 500px;
+    gap: 20px;
+    
+}
+#sidebar{
+    flex-basis: 30%;
+}
+#content{
+    flex-basis: 70%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+#footer{
+    background : #5C3A21;
+    color: white;
+    padding: 10px;
+    margin-top: 20px;
+}
+.card{
+    width: 250px;
+    background: white;
+    border-radius: 10px;
+    padding: 15px;
+    text-align: center;
+    transition: 0.3s;
+}
+.card:hover{
+    transform: translateY(-5px);
+    box-shadow: 0 0 15px gray
+}
+.card img{
+    width: 100%;
+    height: 200px;
+    object-fit:cover;
+    border-radius: 5px;
+}
+#footer{
+    background: #5C3A21;
+    color: white;
+    padding: 10px;
+    margin-top: 20px;
+
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+#sidebar{
+    flex-basis: 30%;
+    border-radius: 10px;
+    padding: 15px;
+    overflow: hidden;
+}
+#sidebar ul{
+    list-style: none;
+    padding: 0;
+    margin-top: 0px;
+}
+#sidebar ul li{
+    margin-bottom: 5px;
+}
+#sidebar ul li a{
+    display: block;
+    padding: 10px;
+    background: #C96A2B;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+#sidebar ul li a:hover{
+    background: #556B2F;
+    border-radius: 5px;
+    transform: translateY(-5px);
+    box-shadow: 0 0 10px gray
+}
+#nav ul{
+    display: flex;
+    list-style: none;
+    justify-content: center;
+    gap: 30px;
+}
+#nav ul li a{
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+}
+#nav ul li a:hover{
+    color: #556B2F;
+}
+
+a, .card{
+    transition: 0.3s;
+}
+#content{
+    align-items: center;
+}

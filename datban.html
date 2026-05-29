@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đặt bàn - Ẩm Thực Tây Nguyên</title>
+    <meta name="description" content="Đặt bàn tại nhà hàng Ẩm Thực Tây Nguyên. Chọn ngày, giờ và số lượng khách phù hợp.">
+    <link rel="stylesheet" href="datban.css">
+</head>
+<body>
+     <!-- Header -->
+        <header id="header">
+            <div id="logo-title">
+                <img src="./file ảnh/logo.png" alt="Logo Ẩm Thực Tây Nguyên">
+                <h3>Ẩm Thực Tây Nguyên</h3>
+            </div>
+            <nav id="nav">
+                <ul>
+                    <li><a href="index.html">Trang chủ</a></li>
+                    <li><a href="datban.html">Đặt bàn</a></li>
+                </ul>
+            </nav>
+        </header>
+    <div id="wrapper">
+        <!-- Main Content -->
+        <main id="main-content">
+            <section class="reservation-section">
+                <h2>Thông tin đặt bàn</h2>
+                
+                <form id="reservation-form">
+                    <!-- Họ và tên khách hàng -->
+                    <fieldset>
+                        <label for="customer-name">Họ và tên khách hàng <span aria-label="bắt buộc">*</span></label>
+                        <input type="text" id="customer-name" name="customer-name" placeholder="Nhập họ và tên" required>
+                    </fieldset>
+
+                    <!-- Số điện thoại -->
+                    <fieldset>
+                        <label for="phone">Số điện thoại <span aria-label="bắt buộc">*</span></label>
+                        <input type="tel" id="phone" name="phone" placeholder="0xxxxxxxxx" required>
+                    </fieldset>
+
+                    <!-- Số lượng khách -->
+                    <fieldset>
+                        <label for="guest-count">Số lượng khách <span aria-label="bắt buộc">*</span></label>
+                        <select id="guest-count" name="guest-count" required>
+                            <option value="">-- Chọn số lượng khách --</option>
+                            <option value="1">1 người</option>
+                            <option value="2">2 người</option>
+                            <option value="3">3 người</option>
+                            <option value="4">4 người</option>
+                            <option value="5">5 người</option>
+                            <option value="6">6 người</option>
+                            <option value="7">7 người</option>
+                            <option value="8">8 người</option>
+                            <option value="9">9 người</option>
+                            <option value="10">10+ người</option>
+                        </select>
+                    </fieldset>
+
+                    <!-- Ngày đặt -->
+                    <fieldset>
+                        <label for="reservation-date">Ngày đặt <span aria-label="bắt buộc">*</span></label>
+                        <input type="date" id="reservation-date" name="reservation-date" value="2026-05-31" required>
+                    </fieldset>
+
+                    <!-- Khung giờ mong muốn -->
+                    <fieldset>
+                        <legend>Khung giờ mong muốn <span aria-label="bắt buộc">*</span></legend>
+                        <div class="time-slot-group">
+                            <button type="button" class="time-slot" data-time="10:00">10:00</button>
+                            <button type="button" class="time-slot" data-time="10:30">10:30</button>
+                            <button type="button" class="time-slot" data-time="11:00">11:00</button>
+                            <button type="button" class="time-slot" data-time="11:30">11:30</button>
+                            <button type="button" class="time-slot" data-time="12:00">12:00</button>
+                            <button type="button" class="time-slot" data-time="12:30">12:30</button>
+                            <button type="button" class="time-slot" data-time="17:00">17:00</button>
+                            <button type="button" class="time-slot" data-time="17:30">17:30</button>
+                            <button type="button" class="time-slot" data-time="18:00">18:00</button>
+                            <button type="button" class="time-slot" data-time="18:30">18:30</button>
+                            <button type="button" class="time-slot" data-time="19:00">19:00</button>
+                            <button type="button" class="time-slot" data-time="19:30">19:30</button>
+                        </div>
+                        <input type="hidden" id="selected-time" name="selected-time" required>
+                    </fieldset>
+
+                    <!-- Khu vực ngồi -->
+                    <fieldset>
+                        <label for="seating-area">Khu vực ngồi <span aria-label="bắt buộc">*</span></label>
+                        <select id="seating-area" name="seating-area" required>
+                            <option value="">-- Chọn khu vực --</option>
+                            <option value="indoor">Khu sân vườn (ngoài trời)</option>
+                            <option value="indoor">Khu trong nhà</option>
+                            <option value="indoor">Khu VIP (có máy lạnh)</option>
+                        </select>
+                    </fieldset>
+
+                    <!-- Ghi chú thêm -->
+                    <fieldset>
+                        <label for="notes">Ghi chú thêm</label>
+                        <textarea id="notes" name="notes" placeholder="Nhập thêm ghi chú (nếu có)" rows="4"></textarea>
+                    </fieldset>
+
+                    <!-- Nút submit -->
+                    <button type="submit" id="submit-btn">Xác nhận đặt bàn</button>
+                </form>
+            </section>
+
+            <!-- Thông tin nhà hàng -->
+            <aside class="restaurant-info">
+                <h3>Vị trí nhà hàng</h3>
+                <iframe id="map-container"
+                    src="https://www.google.com/maps?q=567+Lê+Duẩn+Buôn+Ma+Thuột&output=embed">
+                </iframe>
+                <p><strong>Địa chỉ:</strong> 567 Đường Lê Duẩn, TP. Buôn Ma Thuột, Đắk Lắk</p>
+                <p><strong>Giờ mở cửa:</strong> Thứ 2 - Chủ nhật: 10:00 - 21:30</p>
+                <p><strong>Hotline:</strong> 0234 5678 90</p>
+                <p><strong>Ghi chú:</strong> Có bãi đỗ xe miễn phí</p>
+            </aside>
+        </main>
+
+        <!-- Danh sách các bàn đã đặt -->
+        <section style="margin-top: 30px; background: white; padding: 20px; border-radius: 10px; box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);">
+            <h2 style="color: #5C3A21; margin-bottom: 20px; font-size: 24px; border-bottom: 3px solid #C96A2B; padding-bottom: 10px;">Danh sách các bàn đã đặt</h2>
+            <div id="reservations-list"></div>
+        </section>
+    </div>
+    <div id="footer">
+        <p>CÔNG TY CỔ PHẦN TẬP ĐOÀN 3 THÀNH VIÊN</p>
+        <p>Copyright &copy; by HieuHuynhVn</p>
+    </div>
+    <script src="jquery-4.0.0.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
