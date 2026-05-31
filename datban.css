@@ -3,10 +3,29 @@
     margin: 0 auto;
     padding: 0 20px;
 }
-body{
-    background: #F8F1E7;
-    font-family: Arial, sans-serif;
-    color: #2B2B2B;
+body {
+  background: #f8f1e7;
+  font-family: Arial, sans-serif;
+  color: #2b2b2b;
+  position: relative;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh; /* Đảm bảo body luôn cao bằng toàn bộ màn hình trình duyệt */
+}
+/* Tạo lớp nền phủ kín toàn bộ trang web */
+body::before {
+  content: "";
+  position: fixed; /* Giữ ảnh cố định khi cuộn trang, phủ kín màn hình */
+  top: 0;
+  left: 0;
+  width: 100vw; /* Rộng 100% màn hình */
+  height: 100vh; /* Cao 100% màn hình */
+  background-image: url(https://baotangthegioicaphe.com/Data/Sites/1/media/home-ft-image.jpeg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0.5; /* Độ mờ ảnh nền (chỉnh từ 0.1 đến 1 tùy ý bạn) */
+  z-index: -1; /* Đẩy xuống dưới cùng để không che chữ và card */
 }
 #logo-title{
     display: flex;

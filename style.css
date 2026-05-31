@@ -1,133 +1,154 @@
+body {
+  height: 100%;
+}
+body {
+  background: #f8f1e7;
+  font-family: Arial, sans-serif;
+  color: #2b2b2b;
+  position: relative;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+}
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-image: url(https://baotangthegioicaphe.com/Data/Sites/1/media/home-ft-image.jpeg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0.5;
+  z-index: -1;
+}
 #wrapper {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-}
-body{
-    background: #F8F1E7;
-    font-family: Arial, sans-serif;
-    color: #2B2B2B;
-}
-#logo-title{
-    display: flex;
-    align-items: center;
-    gap: 15px;
-}
-#logo-title img{
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-    object-fit: cover;
-}
-#header{
-    background : #5C3A21;
-    color: white;
-    padding: 20px;
-    margin-bottom: 20px;
-    display: flex;
-    justify-content: space-between;
-}
-#hader h3{
-    margin-bottom: 20px;
-}
-#main-content{
-    display: flex;
-    min-height: 500px;
-    gap: 20px;
-    
-}
-#sidebar{
-    flex-basis: 30%;
-    min-width: 50px;
-}
-#content{
-    flex-basis: 70%;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-}
-#footer{
-    background : #5C3A21;
-    color: white;
-    padding: 10px;
-    margin-top: 20px;
-}
-.card{
-    width: min(250px, 100%);
-    background: white;
-    border-radius: 10px;
-    padding: 15px;
-    text-align: center;
-    transition: 0.3s;
-}
-.card:hover{
-    transform: translateY(-5px);
-    box-shadow: 0 0 15px gray
-}
-.card img{
-    width: 100%;
-    height: 200px;
-    object-fit:cover;
-    border-radius: 5px;
-}
-#footer{
-    background: #5C3A21;
-    color: white;
-    padding: 10px;
-    margin-top: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
 
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
-#sidebar{
-    flex-basis: 30%;
-    border-radius: 10px;
-    padding: 15px;
-    overflow: hidden;
+#logo-title {
+  display: flex;
+  align-items: center;
+  gap: 15px;
 }
-#sidebar ul{
-    list-style: none;
-    padding: 0;
-    margin-top: 0px;
-}
-#sidebar ul li{
-    margin-bottom: 5px;
-}
-#sidebar ul li a{
-    display: block;
-    padding: 10px;
-    background: #C96A2B;
-    color: white;
-    text-decoration: none;
-    border-radius: 5px;
+#logo-title img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  object-fit: cover;
 }
 
-#sidebar ul li a:hover{
-    background: #556B2F;
-    border-radius: 5px;
-    transform: translateY(-5px);
-    box-shadow: 0 0 10px gray
+#header {
+  background: #5c3a21;
+  color: white;
+  padding: 20px;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 15px;
 }
-#nav ul{
-    display: flex;
-    list-style: none;
-    justify-content: center;
-    gap: 30px;
-}
-#nav ul li a{
-    color: white;
-    text-decoration: none;
-    font-size: 18px;
-    font-weight: bold;
-}
-#nav ul li a:hover{
-    color: #556B2F;
+#header h3 {
+  margin-bottom: 0px;
 }
 
-a, .card{
-    transition: 0.3s;
+#main-content {
+  display: flex;
+  width: 100%;
+  min-height: 500px;
+  gap: 20px;
+  flex: 1;
 }
-#content{
-    align-items: center;
+
+#sidebar {
+  flex-basis: 30%;
+  border-radius: 10px;
+  padding: 15px;
+  overflow: hidden;
+}
+
+#sidebar ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 0px;
+}
+#sidebar ul li {
+  margin-bottom: 5px;
+}
+#sidebar ul li a {
+  display: block;
+  padding: 10px;
+  background: #c96a2b;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+#sidebar ul li a:hover {
+  background: #556b2f;
+  transform: translateY(-5px);
+  box-shadow: 0 0 10px gray;
+}
+
+#content {
+  flex-basis: 70%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-content: flex-start;
+}
+
+.card {
+  width: min(220px, 100%);
+  background: white;
+  border-radius: 10px;
+  padding: 15px;
+  text-align: center;
+  transition: 0.3s;
+}
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 15px gray;
+}
+.card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 5px;
+}
+#nav ul {
+  display: flex;
+  list-style: none;
+  justify-content: center;
+  gap: 30px;
+  padding: 0;
+  margin: 0;
+}
+#nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: bold;
+}
+#nav ul li a:hover {
+  color: #556b2f;
+}
+
+#footer {
+  background: #5c3a21;
+  color: white;
+  padding: 15px;
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 10px;
 }
